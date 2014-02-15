@@ -1,0 +1,255 @@
+@charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body > div {
+  height: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+.bg {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -4;
+}
+
+#bg1, #bg2, #bg3 {
+  z-index: -3;
+  top: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg1.png) repeat 0 0;
+}
+
+#bg2 {
+  z-index: -2;
+  background-image: url(../img/bg2.png);
+}
+
+#bg3 {
+  z-index: -1;
+  background-image: url(../img/bg3.png);
+}
+
+#sence1 .zoom {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  left: 50%;
+  -skrollr-animation-name: sence1Box;
+}
+
+@-skrollr-keyframes sence1Box {
+  0 {
+    top[swing]: 80%;
+    opacity[swing]: 0.1;
+    transform: scale(1) rotate(15deg);
+  }
+
+  1200 {
+    top: 50%;
+    opacity: 1.0;
+    transform: scale(5) rotate(360deg);
+  }
+
+  2000 {
+    top: -100%;
+    opacity: 0;
+    transform: scale(1) rotate(720deg);
+  }
+}
+
+#sence2 {
+  background-image: url(../img/sence2_bg.jpg);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height: 3000px;
+}
+#sence2 .slideList {
+  width: 400%;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  -skrollr-animation-name: sence2Slide;
+}
+#sence2 .slideList > div {
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  width: 25%;
+  height: 100%;
+  float: left;
+  font-size: 200px;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+}
+#sence2 .slideList .a {
+  background-image: url(../img/slideA_bg.jpg);
+}
+#sence2 .slideList .b {
+  background-image: url(../img/slideB_bg.jpg);
+}
+#sence2 .slideList .c {
+  background-image: url(../img/slideC_bg.jpg);
+}
+#sence2 .slideList .d {
+  background-image: url(../img/slideD_bg.jpg);
+}
+
+@-skrollr-keyframes sence2Slide {
+  2000 {
+    left: 100%;
+    top: 0;
+  }
+
+  4000 {
+    left: -400%;
+  }
+}
+
+#sence3 {
+  overflow: visible;
+  -skrollr-animation-name: sence3;
+}
+#sence3 .slideList {
+  width: 1500px;
+  height: 1500px;
+  margin: auto;
+  top: -40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+#sence3 .slideList > div {
+  font-size: 0px;
+  line-height: 100%;
+  text-align: center;
+  background-position: center center;
+  color: #fff;
+  overflow: hidden;
+  transform-origin: center center;
+  position: absolute;
+  border-radius: 50%;
+}
+#sence3 .slideList .a {
+  background-image: url(../img/slideA_bg.jpg);
+  z-index: 1;
+  -skrollr-animation-name: sence3SlideA;
+}
+#sence3 .slideList .b {
+  background-image: url(../img/slideB_bg.jpg);
+  z-index: 2;
+  -skrollr-animation-name: sence3SlideB;
+}
+#sence3 .slideList .c {
+  background-image: url(../img/slideC_bg.jpg);
+  z-index: 3;
+  -skrollr-animation-name: sence3SlideC;
+}
+#sence3 .slideList .d {
+  background-image: url(../img/slideD_bg.jpg);
+  -skrollr-animation-name: sence3SlideD;
+  z-index: 4;
+}
+
+@-skrollr-keyframes sence3SlideA {
+  4000 {
+    height: 0%;
+    width: 0%;
+    top: 50%;
+    left: 50%;
+  }
+
+  6000 {
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+  }
+}
+
+@-skrollr-keyframes sence3SlideB {
+  6000 {
+    height: 0%;
+    width: 0%;
+    top: 50%;
+    left: 50%;
+  }
+
+  8000 {
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+  }
+}
+
+@-skrollr-keyframes sence3SlideC {
+  8000 {
+    height: 0%;
+    width: 0%;
+    top: 50%;
+    left: 50%;
+  }
+
+  10000 {
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+  }
+}
+
+@-skrollr-keyframes sence3SlideD {
+  10000 {
+    height: 0%;
+    width: 0%;
+    top: 50%;
+    left: 50%;
+  }
+
+  12000 {
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+  }
+}
+
+#sence4 {
+  position: fixed;
+}
+
+#sence4 .m1, #sence4 .m2, #sence4 .m3 {
+  top: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 800px;
+}
+
+#sence4 .m1 {
+  background: url(../img/m3.png) repeat-x 0 top;
+}
+
+#sence4 .m2 {
+  background: url(../img/m2.png) repeat-x 0 bottom;
+}
+
+#sence4 .m3 {
+  background: url(../img/m1.png) repeat-x 0 bottom;
+}
+
+#sence5 {
+  perspective: 700px;
+  /*母層宣告透視的深度*/
+  perspective-origin: 50% 50%;
+}
